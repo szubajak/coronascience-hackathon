@@ -1,1 +1,1 @@
-# coronascience-hackathon
+# detective

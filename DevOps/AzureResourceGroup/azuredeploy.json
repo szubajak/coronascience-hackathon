@@ -1,0 +1,128 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "resourceGroupName": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "hostingPlanName": {
+      "type": "string"
+    },
+    "hostingPlanWorkerSize": {
+      "type": "string"
+    },
+    "hostingPlanWorkerSizeId": {
+      "type": "string"
+    },
+    "hostingPlanNumberOfWorkers": {
+      "type": "string"
+    },
+    "hostingPlanSku": {
+      "type": "string"
+    },
+    "hostingPlanSkuCode": {
+      "type": "string"
+    },
+    "subscriptionId": {
+      "type": "string"
+    },
+    "coronaWebName": {
+      "type": "string"
+    }
+  },
+  "variables": {
+  },
+  "resources": [
+    {
+      "name": "[parameters('resourceGroupName')]",
+      "type": "Microsoft.Resources/resourceGroups",
+      "apiVersion": "2018-05-01",
+      "location": "[parameters('location')]",
+      "properties": {
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2018-05-01",
+      "name": "resourceDeployment",
+      "resourceGroup": "[parameters('resourceGroupName')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/resourceGroups/', parameters('resourceGroupName'))]"
+      ],
+      "properties": {
+        "mode": "Incremental",
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "parameters": {
+          },
+          "variables": {
+          },
+          "resources": [
+            {
+              "apiVersion": "2018-11-01",
+              "name": "[parameters('coronaWebName')]",
+              "type": "Microsoft.Web/sites",
+              "location": "[parameters('location')]",
+              "tags": null,
+              "dependsOn": [
+                "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
+              ],
+              "properties": {
+                "name": "[parameters('coronaWebName')]",
+                "siteConfig": {
+                  "appSettings": [
+                    {
+                      "name": "ANCM_ADDITIONAL_ERROR_PAGE_LINK",
+                      "value": "https://szubajak.scm.azurewebsites.net/detectors"
+                    }
+                  ],
+                  "metadata": [
+                    {
+                      "name": "CURRENT_STACK",
+                      "value": "dotnetcore"
+                    }
+                  ],
+                  "alwaysOn": false
+                },
+                "serverFarmId": "[concat('/subscriptions/', parameters('subscriptionId'),'/resourcegroups/', parameters('resourceGroupName'), '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
+                "hostingEnvironment": "",
+                "clientAffinityEnabled": true
+              }
+            },
+            {
+              "apiVersion": "2018-11-01",
+              "name": "[parameters('hostingPlanName')]",
+              "type": "Microsoft.Web/serverfarms",
+              "location": "[parameters('location')]",
+              "kind": "",
+              "tags": null,
+              "dependsOn": [
+              ],
+              "properties": {
+                "name": "[parameters('hostingPlanName')]",
+                "workerSize": "[parameters('hostingPlanWorkerSize')]",
+                "workerSizeId": "[parameters('hostingPlanWorkerSizeId')]",
+                "numberOfWorkers": "[parameters('hostingPlanNumberOfWorkers')]",
+                "hostingEnvironment": ""
+              },
+              "sku": {
+                "Tier": "[parameters('hostingPlanSku')]",
+                "Name": "[parameters('hostingPlanSkuCode')]"
+              }
+            }
+          ],
+          "outputs": {
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {
+  },
+  "functions": [
+  ]
+}
