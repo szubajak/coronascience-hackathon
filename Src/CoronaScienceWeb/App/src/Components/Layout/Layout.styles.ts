@@ -8,14 +8,8 @@ export const StyledLayoutBox = styled(Box)`
     user-select: none;
     display: grid;
     background-color: white;
-    grid-template-rows: min-content min-content 1fr min-content;
+    grid-template-rows: min-content 1fr min-content;
     text-align: center;
-`
-
-export const StyledButton = styled(Button)`
-    margin: 10px auto;
-    height: 50px;
-    background-color: lightgray;
 `
 
 export const StyledFooterTypography = styled(Typography)`
