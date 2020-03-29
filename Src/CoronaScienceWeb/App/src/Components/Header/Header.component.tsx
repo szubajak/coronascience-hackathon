@@ -1,9 +1,9 @@
 import React from 'react'
-import { StyledHeaderBox, StyledLogoTypography } from './Header.styles'
+import { StyledHeaderBox, StyledLogoTypography, StyledTextTypography } from './Header.styles'
 
 export const HeaderComponent: React.FC = () => (
-    <StyledHeaderBox elevation={4}>
+    <StyledHeaderBox elevation={2}>
         <StyledLogoTypography>Corona Science Web App</StyledLogoTypography>
-        <StyledLogoTypography>Hackathon</StyledLogoTypography>
+        <StyledTextTypography>Hackathon</StyledTextTypography>
     </StyledHeaderBox>
 )
