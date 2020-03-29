@@ -6,6 +6,8 @@ export const StyledBox = styled(Box)`
     width: 100%;
     height: 100%;
     background-color: lightgray;
+    grid-column: 1;
+    grid-row: 2;
 `
 
 export const StyledTypography = styled(Typography)`

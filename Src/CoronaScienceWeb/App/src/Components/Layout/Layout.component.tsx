@@ -1,6 +1,10 @@
 import React from 'react'
 import { NoSsr, CssBaseline } from '@material-ui/core'
-import { StyledLayoutBox, StyledFooterTypography } from './Layout.styles'
+import {
+    StyledLayoutBox,
+    StyledFooterTypography,
+    StyledFooterBox,
+} from './Layout.styles'
 import { HeaderComponent, TabsComponent } from '~Aggregator'
 
 export const LayoutComponent: React.FunctionComponent = () => {
@@ -10,9 +14,11 @@ export const LayoutComponent: React.FunctionComponent = () => {
             <StyledLayoutBox>
                 <HeaderComponent />
                 <TabsComponent />
-                <StyledFooterTypography>
-                    Hackathon Corona Science Web App
-                </StyledFooterTypography>
+                <StyledFooterBox>
+                    <StyledFooterTypography>
+                        Hackathon Corona Science Web App
+                    </StyledFooterTypography>
+                </StyledFooterBox>
             </StyledLayoutBox>
         </NoSsr>
     )

@@ -11,5 +11,6 @@ export const StyledBox = styled(Box)`
 export const StyledAppBar = styled(AppBar)`
     background-color: #116466;
     top: 0px;
-    position: static;
+    position: relative;
+    height: 48px;
 `
