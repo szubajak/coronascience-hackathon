@@ -1,7 +1,7 @@
 import React from 'react'
-import { AppBar, Tab, Tabs } from '@material-ui/core'
-import { StyledBox } from './Tabs.styles'
-import { ObservationsComponent } from '~Aggregator'
+import { Tab, Tabs } from '@material-ui/core'
+import { StyledBox, StyledAppBar } from './Tabs.styles'
+import { ObservationsComponent, OverviewComponent } from '~Aggregator'
 
 export const TabsComponent: React.FC = () => {
     const [selectedTab, setSelectedTab] = React.useState(0)
@@ -14,22 +14,25 @@ export const TabsComponent: React.FC = () => {
     }
 
     const getTabContent = (): JSX.Element => {
-        if (selectedTab === 0) {
-            return <ObservationsComponent />
+        switch (selectedTab) {
+            case 0:
+                return <OverviewComponent />
+            case 2:
+                return <ObservationsComponent />
+            default:
+                return <React.Fragment />
         }
-
-        return <div>No content yet!</div>
     }
 
     return (
         <StyledBox>
-            <AppBar position="static">
+            <StyledAppBar position="fixed">
                 <Tabs value={selectedTab} onChange={handleChange}>
-                    <Tab label="Observation" />
-                    <Tab label="TAB NAME 1" />
-                    <Tab label="TAB NAME 2" />
+                    <Tab label="Overview" />
+                    <Tab label="Plots" />
+                    <Tab label="Observations" />
                 </Tabs>
-            </AppBar>
+            </StyledAppBar>
             {getTabContent()}
         </StyledBox>
     )

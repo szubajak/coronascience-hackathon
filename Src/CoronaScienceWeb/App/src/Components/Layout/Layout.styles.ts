@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Box, Typography, Button } from '@material-ui/core'
+import { Box, Typography } from '@material-ui/core'
 
 export const StyledLayoutBox = styled(Box)`
     width: 100%;
@@ -9,7 +9,6 @@ export const StyledLayoutBox = styled(Box)`
     display: grid;
     background-color: white;
     grid-template-rows: min-content 1fr min-content;
-    text-align: center;
 `
 
 export const StyledFooterTypography = styled(Typography)`
