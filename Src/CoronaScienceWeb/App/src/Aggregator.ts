@@ -4,7 +4,7 @@ import { ObservationComponent } from '~/Components/Observation/Observation.compo
 import { ObservationsComponent } from '~/Components/Observations/Observations.component'
 import { TabsComponent } from '~/Components/Tabs/Tabs.component'
 import { OverviewComponent } from '~/Components/Overview/Overview.component'
-import { MapComponent } from '~/Components/Map/Map.component'
+import { HeatMapComponent } from '~/Components/HeatMap/HeatMap.component'
 import { SliderComponent } from '~/Components/Slider/Slider.component'
 import { FilterComponent } from '~/Components/Filter/Filter.component'
 
@@ -15,7 +15,7 @@ export {
     TabsComponent,
     ObservationsComponent,
     OverviewComponent,
-    MapComponent,
+    HeatMapComponent,
     SliderComponent,
     FilterComponent,
 }

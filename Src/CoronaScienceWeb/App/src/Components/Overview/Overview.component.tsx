@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyledBox } from './Overview.styles'
-import { MapComponent, SliderComponent, FilterComponent } from '~Aggregator'
+import { HeatMapComponent, SliderComponent, FilterComponent } from '~Aggregator'
 
 export const OverviewComponent: React.FunctionComponent = () => {
     return (
         <StyledBox>
-            <MapComponent />
+            <HeatMapComponent />
             <FilterComponent />
             <SliderComponent />
         </StyledBox>
