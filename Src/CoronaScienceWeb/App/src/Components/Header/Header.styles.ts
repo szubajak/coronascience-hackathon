@@ -14,14 +14,14 @@ export const StyledHeaderBox = styled(Paper)`
 `
 
 export const StyledLogoTypography = styled(Typography)`
-    color: darkblue;
+    color: white;
     font-size: 1.5rem;
     margin: 10px;
     justify-self: start;
 `
 
 export const StyledTextTypography = styled(Typography)`
-    color: darkblue;
+    color: white;
     font-size: 1.5rem;
     margin: 10px;
     justify-self: end;
