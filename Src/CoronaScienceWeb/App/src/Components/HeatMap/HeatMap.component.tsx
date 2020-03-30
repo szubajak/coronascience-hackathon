@@ -1,7 +1,11 @@
 ﻿import React, { Component } from 'react'
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import { Map, TileLayer, Marker, Popup, Polygon } from 'react-leaflet'
 import HeatmapLayer from 'react-leaflet-heatmap-layer'
 import sampleData from '~Assets/Data/sample.json'
+import cantonData from '~Assets/Data/cantons.json'
+import cantonNames from '~Assets/Data/canton-names.json'
+import PolygonWithText from '~Components/PolygonWithText/PolygonWithText.component'
+import './HeatMap.css'
 
 type State = {
     lat: number
@@ -21,8 +25,6 @@ export const HeatMapComponent: React.FC = () => {
     React.useEffect(() => {
         setSamples(sampleData.data)
     }, [])
-
-    console.log(samples)
 
     const state: State = {
         lat: 46.967178,
@@ -82,14 +84,51 @@ export const HeatMapComponent: React.FC = () => {
 
     const position = [state.lat, state.lng]
 
+    const polygon = [
+        [47.19625, 8.52954],
+        [51.52, -0.1],
+        [51.52, -0.12],
+    ]
+
+    const cantons: any[] = []
+
+    cantonData.features.map((canton, index) => {
+        return canton.geometry.coordinates.map((item: any, index2: any) => {
+            if (cantonData.features[index].length > 1) {
+                return cantons.push(
+                    <PolygonWithText
+                        color="#555555"
+                        fillColor="#eee"
+                        positions={item[0]}
+                        key={index + '_' + index2}
+                        text={cantonNames.primary[index].de}
+                    />
+                )
+            } else {
+                return cantons.push(
+                    <PolygonWithText
+                        color="#555555"
+                        fillColor="#eee"
+                        positions={item}
+                        key={index + '_' + index2}
+                        text={cantonNames.primary[index].de}
+                    />
+                )
+            }
+        })
+    })
+
     return (
         <Map center={position} zoom={state.zoom}>
+            {cantons}
+
             <HeatmapLayer
                 points={addressPoints}
                 longitudeExtractor={m => m[1]}
                 latitudeExtractor={m => m[0]}
                 intensityExtractor={m => parseFloat(m[2])}
             />
+
             <TileLayer
                 attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
