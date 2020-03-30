@@ -1,0 +1,227 @@
+{
+  "primary": [
+    {
+      "de": "Freiburg",
+      "default": "Fribourg - Freiburg",
+      "ru": "Фрибур",
+      "it": "Friburgo",
+      "fr": "Fribourg",
+      "es": "Friburgo"
+    },
+    {
+      "de": "Genf",
+      "ru": "Женева",
+      "en": "Geneva",
+      "it": "Ginevra",
+      "fr": "Genève",
+      "es": "Ginebra",
+      "zh": "日內瓦",
+      "ar": "جنيف",
+      "default": "Genève",
+      "th": "เจนีวา",
+      "ja": "ジュネーヴ",
+      "id": "Jenewa",
+      "pl": "Genewa",
+      "tr": "Cenevre"
+    },
+    {
+      "de": "Obwalden",
+      "default": "Obwalden",
+      "ru": "Обвальден",
+      "it": "Obvaldo",
+      "fr": "Obwald"
+    },
+    {
+      "de": "Jura",
+      "default": "Jura",
+      "ru": "Юра",
+      "en": "Jura",
+      "it": "Giura",
+      "fr": "Jura"
+    },
+    {
+      "de": "Schwyz",
+      "default": "Schwyz",
+      "ru": "Швиц",
+      "it": "Svitto",
+      "fr": "Schwyz"
+    },
+    {
+      "de": "Tessin",
+      "default": "Ticino",
+      "ru": "Тичино",
+      "pt": "Tessino",
+      "ja": "ティチーノ州",
+      "it": "Ticino",
+      "fr": "Tessin",
+      "es": "Tesino"
+    },
+    {
+      "de": "Basel-Stadt",
+      "default": "Basel-Stadt",
+      "ru": "Базель-Штадт",
+      "en": "Basel-City",
+      "it": "Basilea Città",
+      "fr": "Bâle-Ville",
+      "es": "Basilea-Ciudad"
+    },
+    {
+      "de": "Neuenburg",
+      "default": "Neuchâtel",
+      "ru": "Невшатель",
+      "it": "Neuchâtel",
+      "fr": "Neuchâtel"
+    },
+    {
+      "de": "Schaffhausen",
+      "default": "Schaffhausen",
+      "ru": "Шаффхаузен",
+      "it": "Sciaffusa",
+      "fr": "Schaffhouse"
+    },
+    {
+      "de": "Wallis",
+      "default": "Valais - Wallis",
+      "ru": "Вале",
+      "it": "Vallese",
+      "fr": "Valais",
+      "es": "Vallés"
+    },
+    {
+      "de": "Thurgau",
+      "default": "Thurgau",
+      "ru": "Тургау",
+      "en": "Thurgovia",
+      "it": "Turgovia",
+      "fr": "Thurgovie"
+    },
+    {
+      "de": "Waadt",
+      "default": "Vaud",
+      "ru": "Во",
+      "it": "Vaud",
+      "fr": "Vaud",
+      "es": "Valdia",
+      "nl": "Waadland"
+    },
+    {
+      "de": "Graubünden",
+      "default": "Graubünden - Grigioni - Grischun",
+      "ru": "Граубюнден (Гризон)",
+      "pt": "Grisões",
+      "en": "Grisons",
+      "it": "Grigioni",
+      "fr": "Grisons",
+      "pl": "Gryzonia",
+      "es": "Grisones"
+    },
+    {
+      "de": "Zürich",
+      "default": "Zürich",
+      "ru": "Цюрих",
+      "en": "Zurich",
+      "it": "Zurigo",
+      "fr": "Zurich"
+    },
+    {
+      "de": "Appenzell Innerrhoden",
+      "default": "Appenzell Innerrhoden",
+      "ru": "Аппенцелль-Иннерроден",
+      "it": "Appenzello Interno",
+      "fr": "Appenzell Rhodes-Intérieures"
+    },
+    {
+      "de": "Basel-Landschaft",
+      "default": "Basel-Landschaft",
+      "ru": "Базель-Ланд",
+      "it": "Basilea Campagna",
+      "fr": "Bâle-Campagne",
+      "es": "Basilea-Campiña"
+    },
+    {
+      "de": "Nidwalden",
+      "default": "Nidwalden",
+      "ru": "Нидвальден",
+      "it": "Nidvaldo",
+      "fr": "Nidwald"
+    },
+    {
+      "de": "Sankt Gallen",
+      "default": "Sankt Gallen",
+      "ru": "Санкт-Галлен",
+      "ja": "ザンクト・ガレン州",
+      "it": "San Gallo",
+      "fr": "Saint-Gall",
+      "es": "San Galo"
+    },
+    {
+      "de": "Uri",
+      "default": "Uri",
+      "ru": "Ури",
+      "it": "Uri",
+      "fr": "Uri"
+    },
+    {
+      "de": "Glarus",
+      "default": "Glarus",
+      "ru": "Гларус",
+      "it": "Glarona",
+      "fr": "Glaris",
+      "es": "Glaris"
+    },
+    {
+      "de": "Solothurn",
+      "default": "Solothurn",
+      "ru": "Золотурн",
+      "it": "Soletta",
+      "fr": "Soleure",
+      "es": "Soleura"
+    },
+    {
+      "de": "Bern",
+      "hi": "बर्न",
+      "ru": "Берн",
+      "ko": "베른",
+      "pt": "Berna",
+      "en": "Bern",
+      "it": "Berna",
+      "fr": "Berne",
+      "es": "Berna",
+      "zh": "伯尔尼",
+      "ar": "برن",
+      "default": "Bern - Berne",
+      "th": "เบิร์น",
+      "ja": "ベルン",
+      "pl": "Berno"
+    },
+    {
+      "de": "Luzern",
+      "default": "Luzern",
+      "ru": "Люцерн",
+      "it": "Lucerna",
+      "fr": "Lucerne",
+      "es": "Lucerna"
+    },
+    {
+      "de": "Zug",
+      "default": "Zug",
+      "ru": "Цуг",
+      "it": "Zugo",
+      "fr": "Zoug"
+    },
+    {
+      "de": "Aargau",
+      "default": "Aargau",
+      "ru": "Аргау",
+      "it": "Argovia",
+      "fr": "Argovie"
+    },
+    {
+      "de": "Appenzell Ausserrhoden",
+      "default": "Appenzell Ausserrhoden",
+      "ru": "Аппенцелль-Аусерроден",
+      "it": "Appenzello Esterno",
+      "fr": "Appenzell Rhodes-Extérieures"
+    }
+  ]
+}
