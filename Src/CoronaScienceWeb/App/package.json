@@ -1,46 +1,51 @@
 {
-  "name": "coronasciencewebapp",
-  "version": "1.0.0",
-  "description": "Corona Science Web App",
-  "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
-  },
-  "author": "Corona Science Team",
-  "license": "MIT",
-  "dependencies": {
-    "@material-ui/core": "^4.9.3",
-    "@material-ui/icons": "^4.9.1",
-    "axios": "^0.19.2",
-    "components": "^0.1.0",
-    "leaflet": "^1.6.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-leaflet": "^2.6.3",
-    "react-leaflet-heatmap-layer": "^2.0.0",
-    "react-router": "^5.1.2",
-    "react-router-dom": "^5.1.2",
-    "styled-components": "^5.0.1",
-    "typescript": "^3.7.5"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@types/react": "^16.9.19",
-    "@types/react-dom": "^16.9.5",
-    "@types/react-leaflet": "^2.5.1",
-    "@types/react-router": "^5.1.4",
-    "@types/react-router-dom": "^5.1.3",
-    "@types/styled-components": "^4.4.3",
-    "@typescript-eslint/eslint-plugin": "^2.19.2",
-    "@typescript-eslint/parser": "^2.19.2",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.18.3",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^1.19.1"
-  },
-  "browserslist": [
-    "last 1 Chrome versions"
-  ]
+    "name": "coronasciencewebapp",
+    "version": "1.0.0",
+    "description": "Corona Science Web App",
+    "scripts": {
+        "start": "parcel src/index.html",
+        "build": "parcel build src/index.html"
+    },
+    "author": "Corona Science Team",
+    "license": "MIT",
+    "dependencies": {
+        "@date-io/core": "^1.3.13",
+        "@date-io/date-fns": "v1",
+        "@material-ui/core": "^4.9.8",
+        "@material-ui/icons": "^4.9.1",
+        "@material-ui/pickers": "^3.2.10",
+        "axios": "^0.19.2",
+        "components": "^0.1.0",
+        "date-fns": "latest",
+        "leaflet": "^1.6.0",
+        "prop-types": "^15.7.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-leaflet": "^2.6.3",
+        "react-leaflet-heatmap-layer": "^2.0.0",
+        "react-router": "^5.1.2",
+        "react-router-dom": "^5.1.2",
+        "styled-components": "^5.0.1",
+        "typescript": "^3.7.5"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.4",
+        "@types/react": "^16.9.19",
+        "@types/react-dom": "^16.9.5",
+        "@types/react-leaflet": "^2.5.1",
+        "@types/react-router": "^5.1.4",
+        "@types/react-router-dom": "^5.1.3",
+        "@types/styled-components": "^4.4.3",
+        "@typescript-eslint/eslint-plugin": "^2.19.2",
+        "@typescript-eslint/parser": "^2.19.2",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-prettier": "^3.1.2",
+        "eslint-plugin-react": "^7.18.3",
+        "parcel-bundler": "^1.12.4",
+        "prettier": "^1.19.1"
+    },
+    "browserslist": [
+        "last 1 Chrome versions"
+    ]
 }

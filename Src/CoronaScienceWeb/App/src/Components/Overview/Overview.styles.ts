@@ -9,5 +9,4 @@ export const StyledBox = styled(Box)`
     background-color: lightblue;
     display: grid;
     grid-template-columns: 1fr 250px;
-    grid-template-rows: 1fr 150px;
 `

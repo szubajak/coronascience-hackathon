@@ -7,7 +7,6 @@ export const OverviewComponent: React.FunctionComponent = () => {
         <StyledBox>
             <HeatMapComponent />
             <FilterComponent />
-            <SliderComponent />
         </StyledBox>
     )
 }
