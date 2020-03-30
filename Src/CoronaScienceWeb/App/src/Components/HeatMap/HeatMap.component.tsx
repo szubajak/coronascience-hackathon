@@ -1,6 +1,7 @@
 ﻿import React, { Component } from 'react'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 import HeatmapLayer from 'react-leaflet-heatmap-layer'
+import sampleData from '~Assets/Data/sample.json'
 
 type State = {
     lat: number
@@ -8,14 +9,28 @@ type State = {
     zoom: number
 }
 
-export class HeatMapComponent extends Component<{}, State> {
-    state = {
+type Sample = {
+    KUERZEL: string
+    nCasesCanton: number
+    pCasesCanton: number
+}
+
+export const HeatMapComponent: React.FC = () => {
+    const [samples, setSamples] = React.useState<Sample[]>(new Array<Sample>())
+
+    React.useEffect(() => {
+        setSamples(sampleData.data)
+    }, [])
+
+    console.log(samples)
+
+    const state: State = {
         lat: 46.967178,
         lng: 8.055188,
         zoom: 9,
     }
 
-    cities = [
+    const cities = [
         {
             name: 'Basel',
             lat: 47.55839,
@@ -48,34 +63,37 @@ export class HeatMapComponent extends Component<{}, State> {
         },
     ]
 
-    addressPoints = []
+    const addressPoints = new Array<State>()
 
-    render() {
-        for (let citynr = 0; citynr < this.cities.length; citynr++) {
+    const fillAddressPoints = () => (): void => {
+        for (let citynr = 0; citynr < cities.length; citynr++) {
             console.log(citynr)
-            let city = this.cities[citynr]
+            const city = cities[citynr]
             for (let i = 0; i < 100; i++) {
-                this.addressPoints.push([
-                    city.lat + Math.random() / 10,
-                    city.lng + Math.random() / 10,
-                    Math.random() * 10,
-                ])
+                addressPoints.push({
+                    lat: city.lat + Math.random() / 10,
+                    lng: city.lng + Math.random() / 10,
+                    zoom: Math.random() * 10,
+                })
             }
         }
-        const position = [this.state.lat, this.state.lng]
-        return (
-            <Map center={position} zoom={this.state.zoom}>
-                <HeatmapLayer
-                    points={this.addressPoints}
-                    longitudeExtractor={m => m[1]}
-                    latitudeExtractor={m => m[0]}
-                    intensityExtractor={m => parseFloat(m[2])}
-                />
-                <TileLayer
-                    attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-            </Map>
-        )
     }
+    fillAddressPoints()
+
+    const position = [state.lat, state.lng]
+
+    return (
+        <Map center={position} zoom={state.zoom}>
+            <HeatmapLayer
+                points={addressPoints}
+                longitudeExtractor={m => m[1]}
+                latitudeExtractor={m => m[0]}
+                intensityExtractor={m => parseFloat(m[2])}
+            />
+            <TileLayer
+                attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+        </Map>
+    )
 }

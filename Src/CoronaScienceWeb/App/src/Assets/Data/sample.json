@@ -1,0 +1,30 @@
+{
+    "data": [
+        { "KUERZEL": "BE", "nCasesCanton": 1.0, "pCasesCanton": 100.0 },
+        { "KUERZEL": "ZH", "nCasesCanton": 0.0, "pCasesCanton": 7.0 },
+        { "KUERZEL": "AG", "nCasesCanton": 0.0, "pCasesCanton": 1.0 },
+        { "KUERZEL": "LU", "nCasesCanton": 0.0, "pCasesCanton": 4.0 },
+        { "KUERZEL": "UR", "nCasesCanton": 0.0, "pCasesCanton": 5.0 },
+        { "KUERZEL": "SZ", "nCasesCanton": 0.0, "pCasesCanton": 0.0 },
+        { "KUERZEL": "OW", "nCasesCanton": 0.0, "pCasesCanton": 40.0 },
+        { "KUERZEL": "NW", "nCasesCanton": 0.0, "pCasesCanton": 7.0 },
+        { "KUERZEL": "GL", "nCasesCanton": 0.0, "pCasesCanton": 10.0 },
+        { "KUERZEL": "ZG", "nCasesCanton": 0.0, "pCasesCanton": 3.0 },
+        { "KUERZEL": "FR", "nCasesCanton": 0.0, "pCasesCanton": 1.0 },
+        { "KUERZEL": "SO", "nCasesCanton": 0.0, "pCasesCanton": 20.0 },
+        { "KUERZEL": "BS", "nCasesCanton": 0.0, "pCasesCanton": 0.0 },
+        { "KUERZEL": "BL", "nCasesCanton": 0.0, "pCasesCanton": 0.0 },
+        { "KUERZEL": "SH", "nCasesCanton": 0.0, "pCasesCanton": 8.0 },
+        { "KUERZEL": "AR", "nCasesCanton": 0.0, "pCasesCanton": 0.0 },
+        { "KUERZEL": "AI", "nCasesCanton": 0.0, "pCasesCanton": 11.0 },
+        { "KUERZEL": "SG", "nCasesCanton": 0.0, "pCasesCanton": 0.0 },
+        { "KUERZEL": "GR", "nCasesCanton": 0.0, "pCasesCanton": 65.0 },
+        { "KUERZEL": "TG", "nCasesCanton": 0.0, "pCasesCanton": 22.0 },
+        { "KUERZEL": "TI", "nCasesCanton": 0.0, "pCasesCanton": 0.0 },
+        { "KUERZEL": "VD", "nCasesCanton": 0.0, "pCasesCanton": 0.0 },
+        { "KUERZEL": "VS", "nCasesCanton": 0.0, "pCasesCanton": 11.0 },
+        { "KUERZEL": "NE", "nCasesCanton": 0.0, "pCasesCanton": 0.0 },
+        { "KUERZEL": "GE", "nCasesCanton": 0.0, "pCasesCanton": 66.0 },
+        { "KUERZEL": "JU", "nCasesCanton": 0.0, "pCasesCanton": 32.0 }
+    ]
+}
