@@ -146,7 +146,7 @@
       "fr": "Nidwald"
     },
     {
-      "de": "Sankt Gallen",
+      "de": "St. Gallen",
       "default": "Sankt Gallen",
       "ru": "Санкт-Галлен",
       "ja": "ザンクト・ガレン州",
@@ -223,5 +223,33 @@
       "it": "Appenzello Esterno",
       "fr": "Appenzell Rhodes-Extérieures"
     }
-  ]
+  ],
+  "short": {
+    "Zürich": "ZH",
+    "Bern": "BE",
+    "Luzern": "LU",
+    "Uri": "UR",
+    "Schwyz": "SZ",
+    "Obwalden": "OW",
+    "Nidwalden": "NW",
+    "Glarus": "GL",
+    "Zug": "ZG",
+    "Freiburg": "FR",
+    "Solothurn": "SO",
+    "Basel-Stadt": "BS",
+    "Basel-Landschaft": "BL",
+    "Schaffhausen": "SH",
+    "Appenzell Ausserrhoden": "AR",
+    "Appenzell Innerrhoden": "AI",
+    "St. Gallen": "SG",
+    "Graubünden": "GR",
+    "Aargau": "AG",
+    "Thurgau": "TG",
+    "Tessin": "TI",
+    "Waadt": "VD",
+    "Wallis": "VS",
+    "Neuenburg": "NE",
+    "Genf": "GE",
+    "Jura": "JU"
+  }
 }
