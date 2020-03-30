@@ -1,5 +1,9 @@
 import React from 'react'
-import { StyledHeaderBox, StyledLogoTypography, StyledTextTypography } from './Header.styles'
+import {
+    StyledHeaderBox,
+    StyledLogoTypography,
+    StyledTextTypography,
+} from './Header.styles'
 
 export const HeaderComponent: React.FC = () => (
     <StyledHeaderBox elevation={2}>

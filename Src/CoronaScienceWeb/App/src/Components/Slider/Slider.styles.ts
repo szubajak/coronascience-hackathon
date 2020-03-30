@@ -5,7 +5,7 @@ export const StyledBox = styled(Box)`
     padding: 5px;
     width: 100%;
     height: 100%;
-    background-color: lightgray;
+    background-color: whitesmoke;
     grid-column: 1;
     grid-row: 2;
 `
