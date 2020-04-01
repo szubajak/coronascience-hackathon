@@ -1,11 +1,11 @@
-﻿import React, { Component } from 'react'
-import { Map, TileLayer, Marker, Popup, Polygon } from 'react-leaflet'
+﻿import React, {Component} from 'react'
+import {Map, TileLayer, Marker, Popup, Polygon} from 'react-leaflet'
 import HeatmapLayer from 'react-leaflet-heatmap-layer'
 import sampleData from '~Assets/Data/sample.json'
 import cantonData from '~Assets/Data/cantons.json'
 import cantonNames from '~Assets/Data/canton-names.json'
-import PolygonWithText from '~Components/PolygonWithText/PolygonWithText.component'
-import './HeatMap.css'
+import PolygonWithText from "~Components/PolygonWithText/PolygonWithText.component";
+import "./HeatMap.css"
 
 type State = {
     lat: number
@@ -25,6 +25,7 @@ export const HeatMapComponent: React.FC = () => {
     React.useEffect(() => {
         setSamples(sampleData.data)
     }, [])
+
 
     const state: State = {
         lat: 46.967178,
@@ -92,31 +93,37 @@ export const HeatMapComponent: React.FC = () => {
 
     const cantons: any[] = []
 
+    console.log(sampleData);
+
+    function colorFromNumber(number) {
+        return "rgb(" + Math.min(255, number * 2 + 30) + ",0,0 )";
+    }
+
     cantonData.features.map((canton, index) => {
         return canton.geometry.coordinates.map((item: any, index2: any) => {
-            if (cantonData.features[index].length > 1) {
-                return cantons.push(
-                    <PolygonWithText
-                        color="#555555"
-                        fillColor="#eee"
-                        positions={item[0]}
-                        key={index + '_' + index2}
-                        text={cantonNames.primary[index].de}
-                    />
-                )
-            } else {
-                return cantons.push(
-                    <PolygonWithText
-                        color="#555555"
-                        fillColor="#eee"
-                        positions={item}
-                        key={index + '_' + index2}
-                        text={cantonNames.primary[index].de}
-                    />
-                )
+                console.log(cantonNames.primary[index].de)
+                console.log(cantonNames.short[cantonNames.primary[index].de])
+                let number = sampleData.data.filter((entry) => {
+                    return entry.KUERZEL == cantonNames.short[cantonNames.primary[index].de];
+                })[0].pCasesCanton;
+                console.log(number);
+                if (cantonData.features[index].length > 1) {
+                    return cantons.push(
+                        <PolygonWithText color={colorFromNumber(number)} fillColor={colorFromNumber(number)}
+                                         positions={item[0]} key={index + "_" + index2}
+                                         text={cantonNames.primary[index].de + " " + number}/>
+                    )
+                } else {
+                    return cantons.push(
+                        <PolygonWithText color={colorFromNumber(number)} fillColor={colorFromNumber(number)}
+                                         positions={item} key={index + "_" + index2}
+                                         text={cantonNames.primary[index].de + " " + number}/>
+                    )
+                }
             }
-        })
+        )
     })
+
 
     return (
         <Map center={position} zoom={state.zoom}>

@@ -7,7 +7,7 @@ const PolygonWithText = props => {
     const text = L.divIcon({html: props.text});
 
     return(
-        <Polygon color={props.color} fillColor={props.fillColor} positions={props.positions} fillOpacity="1">
+        <Polygon color={props.color} fillColor={props.fillColor} positions={props.positions} fillOpacity="0.5" weight={1}>
             <Marker position={center} icon={text} />
         </Polygon>
     );
